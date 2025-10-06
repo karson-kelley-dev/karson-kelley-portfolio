@@ -1,5 +1,5 @@
-import { Box, Container, Typography, Grid, Paper } from '@mui/material';
-import { Code, Speed, Lightbulb } from '@mui/icons-material';
+import { Code, Lightbulb, Speed } from '@mui/icons-material';
+import { Box, Container, Grid, Paper, Typography } from '@mui/material';
 
 const About = () => {
   const highlights = [
@@ -36,22 +36,22 @@ const About = () => {
           A passionate developer committed to delivering high-quality solutions
         </Typography>
 
-        <Grid container spacing={4} sx={{ mb: 6 }}>
-          {highlights.map((item, index) => (
-            <Grid item xs={12} md={4} key={index}>
-              <Paper
-                elevation={2}
-                sx={{
-                  p: 4,
-                  textAlign: 'center',
-                  height: '100%',
-                  transition: 'transform 0.3s ease',
-                  '&:hover': {
-                    transform: 'translateY(-8px)',
-                    boxShadow: '0 12px 24px rgba(0,0,0,0.1)',
-                  },
-                }}
-              >
+       <Grid container spacing={4} sx={{ mb: 6 }}>
+        {highlights.map((item, index) => (
+          <Grid key={index} size={{ xs: 12, md: 4 }}>
+            <Paper
+              elevation={2}
+              sx={{
+                p: 4,
+                textAlign: 'center',
+                height: '100%',
+                transition: 'transform 0.3s ease',
+                '&:hover': {
+                  transform: 'translateY(-8px)',
+                  boxShadow: '0 12px 24px rgba(0,0,0,0.1)',
+                },
+              }}
+            >
                 <Box sx={{ color: '#667eea', mb: 2 }}>{item.icon}</Box>
                 <Typography variant="h6" gutterBottom fontWeight="bold">
                   {item.title}

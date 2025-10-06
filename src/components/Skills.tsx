@@ -1,4 +1,4 @@
-import { Box, Container, Typography, Grid, Paper, LinearProgress } from '@mui/material';
+import { Box, Container, Grid, LinearProgress, Paper, Typography } from '@mui/material';
 
 interface Skill {
   name: string;
@@ -49,7 +49,7 @@ const Skills = () => {
 
         <Grid container spacing={4}>
           {categories.map((category) => (
-            <Grid item xs={12} md={4} key={category}>
+            <Grid size={{xs: 12, md: 4}} key={category}>
               <Paper
                 elevation={2}
                 sx={{

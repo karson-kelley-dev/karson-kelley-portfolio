@@ -1,5 +1,5 @@
-import { Box, Container, Typography, Grid, Card, CardContent, CardMedia, CardActions, Button, Chip } from '@mui/material';
 import { GitHub, Launch } from '@mui/icons-material';
+import { Box, Button, Card, CardActions, CardContent, CardMedia, Chip, Container, Grid, Typography } from '@mui/material';
 
 interface Project {
   title: string;
@@ -63,7 +63,7 @@ const Projects = () => {
 
         <Grid container spacing={4}>
           {projects.map((project, index) => (
-            <Grid item xs={12} md={6} key={index}>
+            <Grid sx={{xs: 12, md: 4}} key={index}>
               <Card
                 sx={{
                   height: '100%',

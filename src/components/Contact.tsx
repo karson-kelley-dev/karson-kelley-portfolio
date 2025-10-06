@@ -1,5 +1,5 @@
-import { Box, Container, Typography, Grid, Paper, IconButton } from '@mui/material';
 import { Email, GitHub, LinkedIn, Twitter } from '@mui/icons-material';
+import { Box, Container, Grid, IconButton, Paper, Typography } from '@mui/material';
 
 const Contact = () => {
   const contactInfo = [
@@ -49,7 +49,7 @@ const Contact = () => {
 
         <Grid container spacing={4} sx={{ mb: 6 }}>
           {contactInfo.map((item, index) => (
-            <Grid item xs={12} md={4} key={index}>
+            <Grid size ={{xs: 12, md: 4}} key={index}>
               <Paper
                 elevation={0}
                 sx={{
