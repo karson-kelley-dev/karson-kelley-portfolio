@@ -1,35 +1,12 @@
-import { Box, Container, Grid, LinearProgress, Paper, Typography } from '@mui/material';
-
-interface Skill {
-  name: string;
-  level: number; // 0-100
-  category: string;
-}
+import { Box, Chip, Container, Grid, Paper, Typography } from '@mui/material';
 
 const Skills = () => {
-  const skills: Skill[] = [
-    // Frontend
-    { name: 'React', level: 90, category: 'Frontend' },
-    { name: 'TypeScript', level: 85, category: 'Frontend' },
-    { name: 'JavaScript', level: 95, category: 'Frontend' },
-    { name: 'HTML/CSS', level: 90, category: 'Frontend' },
-    { name: 'Material-UI', level: 85, category: 'Frontend' },
-
-    // Backend
-    { name: 'Node.js', level: 85, category: 'Backend' },
-    { name: 'Express', level: 80, category: 'Backend' },
-    { name: 'REST APIs', level: 90, category: 'Backend' },
-    { name: 'PostgreSQL', level: 75, category: 'Backend' },
-    { name: 'MongoDB', level: 70, category: 'Backend' },
-
-    // Tools & Others
-    { name: 'Git', level: 85, category: 'Tools' },
-    { name: 'Docker', level: 70, category: 'Tools' },
-    { name: 'Vite', level: 80, category: 'Tools' },
-    { name: 'npm/yarn', level: 90, category: 'Tools' },
-  ];
-
-  const categories = ['Frontend', 'Backend', 'Tools'];
+  const skillCategories = {
+    Frontend: ['React', 'TypeScript', 'JavaScript', 'HTML/CSS', 'Handlebars'],
+    Backend: ['Node.js', 'AWS Lambda', 'DynamoDB', 'REST APIs', 'Python'],
+    'Systems & Languages': ['C', 'C++', 'Assembly'],
+    'Tools & Platforms': ['Git', 'AWS', 'npm/yarn']
+  };
 
   return (
     <Box
@@ -48,8 +25,8 @@ const Skills = () => {
         </Typography>
 
         <Grid container spacing={4}>
-          {categories.map((category) => (
-            <Grid size={{xs: 12, md: 4}} key={category}>
+          {Object.entries(skillCategories).map(([category, skills]) => (
+            <Grid size={{xs: 12, md: 6, lg: 3}} key={category}>
               <Paper
                 elevation={2}
                 sx={{
@@ -57,37 +34,25 @@ const Skills = () => {
                   height: '100%',
                 }}
               >
-                <Typography variant="h5" gutterBottom fontWeight="bold" sx={{ mb: 3, color: '#667eea' }}>
+                <Typography variant="h6" gutterBottom fontWeight="bold" sx={{ mb: 3, color: '#667eea' }}>
                   {category}
                 </Typography>
-                <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
-                  {skills
-                    .filter((skill) => skill.category === category)
-                    .map((skill, index) => (
-                      <Box key={index}>
-                        <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 1 }}>
-                          <Typography variant="body2" fontWeight="medium">
-                            {skill.name}
-                          </Typography>
-                          <Typography variant="body2" color="text.secondary">
-                            {skill.level}%
-                          </Typography>
-                        </Box>
-                        <LinearProgress
-                          variant="determinate"
-                          value={skill.level}
-                          sx={{
-                            height: 8,
-                            borderRadius: 4,
-                            bgcolor: 'rgba(102, 126, 234, 0.1)',
-                            '& .MuiLinearProgress-bar': {
-                              bgcolor: '#667eea',
-                              borderRadius: 4,
-                            },
-                          }}
-                        />
-                      </Box>
-                    ))}
+                <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1.5 }}>
+                  {skills.map((skill, index) => (
+                    <Chip
+                      key={index}
+                      label={skill}
+                      variant="outlined"
+                      sx={{
+                        justifyContent: 'flex-start',
+                        borderColor: '#667eea',
+                        color: '#667eea',
+                        '&:hover': {
+                          bgcolor: 'rgba(102, 126, 234, 0.1)',
+                        },
+                      }}
+                    />
+                  ))}
                 </Box>
               </Paper>
             </Grid>

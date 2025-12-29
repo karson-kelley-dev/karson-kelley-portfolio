@@ -1,5 +1,5 @@
-import { Box, Container, Typography, Button, Avatar } from '@mui/material';
-import { GitHub, LinkedIn, Email } from '@mui/icons-material';
+import { Email, GitHub } from '@mui/icons-material';
+import { Avatar, Box, Button, Container, Typography } from '@mui/material';
 
 const Hero = () => {
   return (
@@ -53,24 +53,10 @@ const Hero = () => {
                   color: '#667eea',
                   '&:hover': { bgcolor: 'rgba(255,255,255,0.9)' },
                 }}
-                href="https://github.com/yourusername" // Replace with your GitHub
+                href="https://github.com/karson-kelley-dev" 
                 target="_blank"
               >
                 GitHub
-              </Button>
-              <Button
-                variant="outlined"
-                size="large"
-                startIcon={<LinkedIn />}
-                sx={{
-                  borderColor: 'white',
-                  color: 'white',
-                  '&:hover': { borderColor: 'white', bgcolor: 'rgba(255,255,255,0.1)' },
-                }}
-                href="https://linkedin.com/in/yourprofile" // Replace with your LinkedIn
-                target="_blank"
-              >
-                LinkedIn
               </Button>
               <Button
                 variant="outlined"

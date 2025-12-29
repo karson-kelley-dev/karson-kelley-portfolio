@@ -66,15 +66,10 @@ const About = () => {
 
         <Box sx={{ maxWidth: 800, mx: 'auto' }}>
           <Typography variant="body1" paragraph sx={{ fontSize: '1.1rem', lineHeight: 1.8 }}>
-            I'm a full stack developer with a passion for building modern web applications using TypeScript, React, and Node.js.
-            With several years of experience, I've worked on projects ranging from small business websites to large-scale enterprise applications.
+            Computer Science senior at University of Colorado Boulder specializing in React, TypeScript, and AWS cloud solutions. I build modern, scalable web applications with a focus on clean code and exceptional user experiences. Recent work includes HIPAA-compliant health technology platforms and property management systems for apartment complexes.
           </Typography>
           <Typography variant="body1" paragraph sx={{ fontSize: '1.1rem', lineHeight: 1.8 }}>
-            I believe in writing clean, maintainable code and creating intuitive user experiences. When I'm not coding, I enjoy
-            contributing to open source projects and staying up-to-date with the latest web technologies.
-          </Typography>
-          <Typography variant="body1" sx={{ fontSize: '1.1rem', lineHeight: 1.8 }}>
-            Currently available for freelance projects. Let's work together to bring your ideas to life!
+            Currently available for freelance projects while completing my degree. I deliver high-quality solutions quickly while maintaining professional standards and clear communication throughout the development process.
           </Typography>
         </Box>
       </Container>

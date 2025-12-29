@@ -1,4 +1,4 @@
-import { Email, GitHub, LinkedIn, Twitter } from '@mui/icons-material';
+import { Email, GitHub } from '@mui/icons-material';
 import { Box, Container, Grid, IconButton, Paper, Typography } from '@mui/material';
 
 const Contact = () => {
@@ -6,28 +6,20 @@ const Contact = () => {
     {
       icon: <Email sx={{ fontSize: 40 }} />,
       label: 'Email',
-      value: 'your.email@example.com',
-      link: 'mailto:your.email@example.com',
+      value: 'karson-kelley-dev@outlook.com',
+      link: 'mailto:karson-kelley-dev@outlook.com',
     },
     {
       icon: <GitHub sx={{ fontSize: 40 }} />,
       label: 'GitHub',
-      value: 'github.com/yourusername',
-      link: 'https://github.com/yourusername',
-    },
-    {
-      icon: <LinkedIn sx={{ fontSize: 40 }} />,
-      label: 'LinkedIn',
-      value: 'linkedin.com/in/yourprofile',
-      link: 'https://linkedin.com/in/yourprofile',
+      value: 'github.com/karson-kelley-dev',
+      link: 'https://github.com/karson-kelley-dev',
     },
   ];
 
   const socialLinks = [
-    { icon: <Email />, link: 'mailto:your.email@example.com', label: 'Email' },
-    { icon: <GitHub />, link: 'https://github.com/yourusername', label: 'GitHub' },
-    { icon: <LinkedIn />, link: 'https://linkedin.com/in/yourprofile', label: 'LinkedIn' },
-    { icon: <Twitter />, link: 'https://twitter.com/yourusername', label: 'Twitter' },
+    { icon: <Email />, link: 'malito:karson-kelley-dev@outlook.com', label: 'Email' },
+    { icon: <GitHub />, link: 'https://github.com/karson-kelley-dev', label: 'GitHub' },
   ];
 
   return (
@@ -49,7 +41,7 @@ const Contact = () => {
 
         <Grid container spacing={4} sx={{ mb: 6 }}>
           {contactInfo.map((item, index) => (
-            <Grid size ={{xs: 12, md: 4}} key={index}>
+            <Grid size ={{xs: 12, md: 6}} key={index}>
               <Paper
                 elevation={0}
                 sx={{

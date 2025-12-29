@@ -1,12 +1,16 @@
 import { GitHub, Launch } from '@mui/icons-material';
 import { Box, Button, Card, CardActions, CardContent, CardMedia, Chip, Container, Grid, Typography } from '@mui/material';
 
+import {
+  default as brentmoorCreateTenant
+} from '../assets/brentmoor-create-tenant.png';
+
 interface Project {
   title: string;
   description: string;
-  image: string;
+  image?: string;
   technologies: string[];
-  githubUrl: string;
+  githubUrl?: string;
   liveUrl?: string;
 }
 
@@ -14,34 +18,18 @@ const Projects = () => {
   // Replace with your actual projects
   const projects: Project[] = [
     {
-      title: 'E-Commerce Platform',
-      description: 'A full-stack e-commerce solution with product management, shopping cart, and secure checkout. Built with React, Node.js, and PostgreSQL.',
-      image: 'https://via.placeholder.com/400x250?text=Project+1', // Replace with actual image
-      technologies: ['React', 'TypeScript', 'Node.js', 'PostgreSQL', 'Stripe'],
-      githubUrl: 'https://github.com/yourusername/project1',
-      liveUrl: 'https://project1.demo.com',
+      title: 'Brentmoor Parking Management Portal',
+
+      description: "Full-stack serverless parking management system built for Brentmoor apartment complex. Features dual portals: tenants can register vehicles and request guest parking passes, while administrators manage tenant accounts, approve vehicle registrations, and oversee all parking activity.Key features include multi-step tenant onboarding, vehicle registration with state-specific validation, guest parking workflow, role-based access control separating tenant and admin views, and Excel bulk import for tenant data management.Built with React and TypeScript for type-safe development, AWS Lambda for serverless API functions, DynamoDB for scalable data storage, Cognito for authentication and role management, and CloudFront for global content delivery.",
+
+      image: brentmoorCreateTenant,
+      technologies: ['React', 'TypeScript', 'AWS Lambda', 'DynamoDB', 'Cognito','CloudFront'],
     },
     {
-      title: 'Task Management App',
-      description: 'A collaborative task management application with real-time updates, team workspaces, and productivity analytics.',
-      image: 'https://via.placeholder.com/400x250?text=Project+2',
-      technologies: ['React', 'TypeScript', 'Firebase', 'Material-UI'],
-      githubUrl: 'https://github.com/yourusername/project2',
-      liveUrl: 'https://project2.demo.com',
-    },
-    {
-      title: 'Weather Dashboard',
-      description: 'A responsive weather application that provides real-time weather data, forecasts, and interactive maps using weather APIs.',
-      image: 'https://via.placeholder.com/400x250?text=Project+3',
-      technologies: ['React', 'TypeScript', 'OpenWeather API', 'Chart.js'],
-      githubUrl: 'https://github.com/yourusername/project3',
-    },
-    {
-      title: 'Portfolio CMS',
-      description: 'A headless CMS for managing portfolio content with a custom admin dashboard and REST API.',
-      image: 'https://via.placeholder.com/400x250?text=Project+4',
-      technologies: ['Node.js', 'Express', 'MongoDB', 'React'],
-      githubUrl: 'https://github.com/yourusername/project4',
+      title: 'PontRx Health Technology Platform',
+      description: 'Frontend development for venture-backed prescription discount platform serving 1,000+ healthcare providers nationwide. Built patient-facing interfaces for real-time pharmacy price comparison, prescription search, and medication management tools using React and TypeScript. Contributed to EHR integrations and HIPAA-compliant patient data workflows on AWS infrastructure, enabling cost savings averaging $200+ monthly for users.',
+      technologies: ['React', 'TypeScript', 'AWS Lambda', 'DynamoDB', 'Cognito','CloudFront'],
+      liveUrl: 'https://pontrx.com',
     },
   ];
 
@@ -78,9 +66,9 @@ const Projects = () => {
               >
                 <CardMedia
                   component="img"
-                  height="200"
-                  image={project.image}
-                  alt={project.title}
+                  height="auto"
+                  image={project.image} // Show first image by default
+                  alt= {project.image ? project.title : ''}
                   sx={{ objectFit: 'cover' }}
                 />
                 <CardContent sx={{ flexGrow: 1 }}>
@@ -106,15 +94,18 @@ const Projects = () => {
                   </Box>
                 </CardContent>
                 <CardActions sx={{ px: 2, pb: 2 }}>
-                  <Button
-                    size="small"
-                    startIcon={<GitHub />}
-                    href={project.githubUrl}
-                    target="_blank"
-                    sx={{ color: '#667eea' }}
+                  <Box
+                    sx={{
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: 1,
+                      color: '#667eea',
+                      fontSize: '0.875rem',
+                    }}
                   >
-                    Code
-                  </Button>
+                    <GitHub fontSize="small" />
+                    Private Repository
+                  </Box>
                   {project.liveUrl && (
                     <Button
                       size="small"
@@ -137,7 +128,7 @@ const Projects = () => {
             variant="outlined"
             size="large"
             startIcon={<GitHub />}
-            href="https://github.com/yourusername" // Replace with your GitHub profile
+            href="https://github.com/karson-kelley-dev" 
             target="_blank"
             sx={{
               borderColor: '#667eea',
