@@ -1,5 +1,7 @@
 import { Email, GitHub } from '@mui/icons-material';
 import { Avatar, Box, Button, Container, Typography } from '@mui/material';
+import headshotImage from '../assets/headshot.jpg';
+
 
 const Hero = () => {
   return (
@@ -23,7 +25,7 @@ const Hero = () => {
           }}
         >
           <Avatar
-            src="/profile-photo.jpg" // Replace with your actual photo path
+            src={headshotImage}
             alt="Profile Photo"
             sx={{
               width: { xs: 200, md: 300 },
