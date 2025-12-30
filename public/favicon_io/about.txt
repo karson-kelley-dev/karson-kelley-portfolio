@@ -1,6 +1,6 @@
 This favicon was generated using the following font:
 
-- Font Title: Anonymous Pro
+- Font Title: Anek Telugu
 - Font Author: undefined
-- Font Source: https://fonts.gstatic.com/s/anonymouspro/v21/rP2Bp2a15UIB7Un-bOeISG3pLlw89CH98Ko.ttf
+- Font Source: https://fonts.gstatic.com/s/anektelugu/v12/LhWLMVrUNvsddMtYGCx4FcVWOjlwE1WgXdoJ-5XHMl2DkooGK7i13y--oE2G2ep10_8.ttf
 - Font License: undefined)
