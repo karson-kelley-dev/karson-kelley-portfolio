@@ -1,9 +1,7 @@
 import { GitHub, Launch } from '@mui/icons-material';
 import { Box, Button, Card, CardActions, CardContent, CardMedia, Chip, Container, Grid, Typography } from '@mui/material';
 
-import {
-  default as brentmoorCreateTenant
-} from '../assets/brentmoor-create-tenant.png';
+import brentmoorCreateTenant from '../assets/brentmoor-create-tenant.png';
 
 interface Project {
   title: string;
