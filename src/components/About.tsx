@@ -23,40 +23,46 @@ const About = () => {
   return (
     <Box
       id="about"
-      sx={{
-        py: 10,
-        bgcolor: '#f5f5f5',
-      }}
+      sx={{ py: 14 }}
     >
       <Container maxWidth="lg">
-        <Typography variant="h3" component="h2" gutterBottom textAlign="center" fontWeight="bold" sx={{ mb: 2 }}>
+        <Typography
+          variant="h3"
+          component="h2"
+          gutterBottom
+          textAlign="center"
+          fontWeight="bold"
+          sx={{ mb: 2, color: '#e8e8ed' }}
+        >
           About Me
         </Typography>
-        <Typography variant="body1" textAlign="center" sx={{ mb: 6, fontSize: '1.1rem', color: 'text.secondary' }}>
+        <Typography
+          variant="body1"
+          textAlign="center"
+          sx={{ mb: 8, fontSize: '1.1rem', color: '#8888a0' }}
+        >
           A passionate developer committed to delivering high-quality solutions
         </Typography>
 
-       <Grid container spacing={4} sx={{ mb: 6 }}>
-        {highlights.map((item, index) => (
-          <Grid key={index} size={{ xs: 12, md: 4 }}>
-            <Paper
-              elevation={2}
-              sx={{
-                p: 4,
-                textAlign: 'center',
-                height: '100%',
-                transition: 'transform 0.3s ease',
-                '&:hover': {
-                  transform: 'translateY(-8px)',
-                  boxShadow: '0 12px 24px rgba(0,0,0,0.1)',
-                },
-              }}
-            >
-                <Box sx={{ color: '#667eea', mb: 2 }}>{item.icon}</Box>
-                <Typography variant="h6" gutterBottom fontWeight="bold">
+        <Grid container spacing={4} sx={{ mb: 8 }}>
+          {highlights.map((item, index) => (
+            <Grid key={index} size={{ xs: 12, md: 4 }}>
+              <Paper
+                sx={{
+                  p: 4,
+                  textAlign: 'center',
+                  height: '100%',
+                  transition: 'border-color 0.3s ease',
+                  '&:hover': {
+                    borderColor: '#00d4aa',
+                  },
+                }}
+              >
+                <Box sx={{ color: '#00d4aa', mb: 2 }}>{item.icon}</Box>
+                <Typography variant="h6" gutterBottom fontWeight="bold" sx={{ color: '#e8e8ed' }}>
                   {item.title}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">
+                <Typography variant="body2" sx={{ color: '#8888a0' }}>
                   {item.description}
                 </Typography>
               </Paper>
@@ -65,10 +71,10 @@ const About = () => {
         </Grid>
 
         <Box sx={{ maxWidth: 800, mx: 'auto' }}>
-          <Typography variant="body1" paragraph sx={{ fontSize: '1.1rem', lineHeight: 1.8 }}>
-            Computer Science senior at University of Colorado Boulder specializing in React, TypeScript, and AWS cloud solutions. I build modern, scalable web applications with a focus on clean code and exceptional user experiences. Recent work includes HIPAA-compliant health technology platforms and property management systems for apartment complexes.
+          <Typography variant="body1" paragraph sx={{ fontSize: '1.1rem', lineHeight: 1.8, color: '#8888a0' }}>
+            Computer Science student at the University of Colorado Boulder specializing in React, TypeScript, and AWS cloud infrastructure. I build full-stack web applications from healthcare platforms to business management tools, and I'm building an AI automation agency helping businesses streamline operations with intelligent workflows.
           </Typography>
-          <Typography variant="body1" paragraph sx={{ fontSize: '1.1rem', lineHeight: 1.8 }}>
+          <Typography variant="body1" paragraph sx={{ fontSize: '1.1rem', lineHeight: 1.8, color: '#8888a0' }}>
             Currently available for freelance projects while completing my degree. I deliver high-quality solutions quickly while maintaining professional standards and clear communication throughout the development process.
           </Typography>
         </Box>

@@ -18,7 +18,7 @@ const Contact = () => {
   ];
 
   const socialLinks = [
-    { icon: <Email />, link: 'malito:karson-kelley-dev@outlook.com', label: 'Email' },
+    { icon: <Email />, link: 'mailto:karson-kelley-dev@outlook.com', label: 'Email' },
     { icon: <GitHub />, link: 'https://github.com/karson-kelley-dev', label: 'GitHub' },
   ];
 
@@ -26,48 +26,57 @@ const Contact = () => {
     <Box
       id="contact"
       sx={{
-        py: 10,
-        background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-        color: 'white',
+        py: 14,
+        bgcolor: '#141420',
+        borderTop: '1px solid #2a2a40',
       }}
     >
       <Container maxWidth="lg">
-        <Typography variant="h3" component="h2" gutterBottom textAlign="center" fontWeight="bold" sx={{ mb: 2 }}>
+        <Typography
+          variant="h3"
+          component="h2"
+          gutterBottom
+          textAlign="center"
+          fontWeight="bold"
+          sx={{ mb: 2, color: '#e8e8ed' }}
+        >
           Get In Touch
         </Typography>
-        <Typography variant="body1" textAlign="center" sx={{ mb: 6, fontSize: '1.1rem', opacity: 0.95 }}>
-          I'm currently available for freelance work. Let's build something great together!
+        <Typography
+          variant="body1"
+          textAlign="center"
+          sx={{ mb: 8, fontSize: '1.1rem', color: '#8888a0' }}
+        >
+          Open to full-time opportunities and select freelance projects. Let's build something great together!
         </Typography>
 
         <Grid container spacing={4} sx={{ mb: 6 }}>
           {contactInfo.map((item, index) => (
-            <Grid size ={{xs: 12, md: 6}} key={index}>
+            <Grid size={{ xs: 12, md: 6 }} key={index}>
               <Paper
-                elevation={0}
                 sx={{
                   p: 4,
                   textAlign: 'center',
-                  bgcolor: 'rgba(255, 255, 255, 0.95)',
-                  transition: 'transform 0.3s ease',
+                  bgcolor: '#1c1c2e',
+                  transition: 'border-color 0.3s ease',
                   '&:hover': {
-                    transform: 'translateY(-8px)',
-                    boxShadow: '0 12px 24px rgba(0,0,0,0.2)',
+                    borderColor: '#00d4aa',
                   },
                 }}
               >
-                <Box sx={{ color: '#667eea', mb: 2 }}>{item.icon}</Box>
-                <Typography variant="h6" gutterBottom fontWeight="bold" color="text.primary">
+                <Box sx={{ color: '#00d4aa', mb: 2 }}>{item.icon}</Box>
+                <Typography variant="h6" gutterBottom fontWeight="bold" sx={{ color: '#e8e8ed' }}>
                   {item.label}
                 </Typography>
                 <Typography
                   variant="body2"
-                  color="text.secondary"
                   component="a"
                   href={item.link}
                   sx={{
+                    color: '#8888a0',
                     textDecoration: 'none',
                     '&:hover': {
-                      color: '#667eea',
+                      color: '#00d4aa',
                     },
                   }}
                 >
@@ -79,7 +88,7 @@ const Contact = () => {
         </Grid>
 
         <Box sx={{ textAlign: 'center' }}>
-          <Typography variant="h6" gutterBottom sx={{ mb: 2 }}>
+          <Typography variant="h6" gutterBottom sx={{ mb: 2, color: '#e8e8ed' }}>
             Connect with me
           </Typography>
           <Box sx={{ display: 'flex', justifyContent: 'center', gap: 2 }}>
@@ -91,11 +100,11 @@ const Contact = () => {
                 rel="noopener noreferrer"
                 aria-label={social.label}
                 sx={{
-                  bgcolor: 'rgba(255, 255, 255, 0.2)',
-                  color: 'white',
+                  bgcolor: 'rgba(0, 212, 170, 0.1)',
+                  color: '#00d4aa',
                   '&:hover': {
-                    bgcolor: 'white',
-                    color: '#667eea',
+                    bgcolor: '#00d4aa',
+                    color: '#0a0a0f',
                   },
                 }}
               >
@@ -105,9 +114,9 @@ const Contact = () => {
           </Box>
         </Box>
 
-        <Box sx={{ textAlign: 'center', mt: 8, pt: 4, borderTop: '1px solid rgba(255,255,255,0.2)' }}>
-          <Typography variant="body2" sx={{ opacity: 0.8 }}>
-            © {new Date().getFullYear()} Karson Kelley. Built with React, TypeScript, and Material-UI.
+        <Box sx={{ textAlign: 'center', mt: 8, pt: 4, borderTop: '1px solid #2a2a40' }}>
+          <Typography variant="body2" sx={{ color: '#8888a0' }}>
+            &copy; {new Date().getFullYear()} Karson Kelley. Built with React, TypeScript, and Material-UI.
           </Typography>
         </Box>
       </Container>
